@@ -23,7 +23,7 @@ const FormModal = () => {
     e.preventDefault();
     setDisable(true)
     try{
-      const req = await axios.post(`${process.env.backend_url}`, formData);
+      const req = await axios.post("https://accredian-backend-task-5ogc.onrender.com/api/referrals", formData);
       console.log(req)
       toast("\u2714 Referral confirmation request sent successfully.")
       handleClose()
